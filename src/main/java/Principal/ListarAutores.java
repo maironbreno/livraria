@@ -20,6 +20,8 @@ public class ListarAutores {
         for(Autor e : autores) {
             System.out.println("Autor: " + e.getNome() + " - " + e.getEmail());
         }
+        manager.close();
+        factory.close();
     }
 }
 

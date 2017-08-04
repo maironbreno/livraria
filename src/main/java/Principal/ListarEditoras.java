@@ -20,5 +20,7 @@ public class ListarEditoras {
         for(Editora e : editoras) {
             System.out.println("Editora: " + e.getNome() + " - " + e.getEmail());
         }
+        manager.close();
+        factory.close();
     }
 }
