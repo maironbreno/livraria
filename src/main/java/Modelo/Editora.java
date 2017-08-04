@@ -21,4 +21,5 @@ public class Editora implements Serializable {
 
     @Column(name = "TX_EMAIL_EDITORA")
     private String email;
+
 }

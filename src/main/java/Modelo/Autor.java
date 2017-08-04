@@ -21,4 +21,5 @@ public class Autor implements Serializable {
 
     @Column(name = "TX_EMAIL_AUTOR")
     private String email;
+
 }
