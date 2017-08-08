@@ -16,9 +16,6 @@ public class Usuario implements Serializable{
     @Column(name = "ID_USUARIO")
     private Long id;
 
-    @Column(name = "NM_USUARIO")
-    private String nome;
-
     @Column(name = "TX_EMAIL_USUARIO")
     private String email;
 

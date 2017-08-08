@@ -1,24 +1,29 @@
 package Principal;
 
-import Modelo.Usuario;
+
+import Modelo.Autor;
+import Modelo.Livro;
+
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
-import java.util.Calendar;
 
-public class AdicionarUsuario {
+public class AdicionaLivroAutor {
     public static void main(String[] args){
         EntityManagerFactory factory = Persistence.createEntityManagerFactory("bd_livraria");
-
-
         EntityManager manager = factory.createEntityManager();
+
         manager.getTransaction().begin();
 
-        Usuario usuario = new Usuario();
-        usuario.setEmail("usuario@contato.com");
-        usuario.setDataDeCadastro(Calendar.getInstance());
+        Autor a = new Autor();
+        a.setNome("Rafael Cosentino");
 
-        manager.persist(usuario);
+        Livro l = new Livro();
+        l.setNome("JPA2");
+        l.getAutores().add(a);
+
+        manager.persist(a);
+        manager.persist(l);
 
         manager.getTransaction().commit();
 
